@@ -11,18 +11,18 @@ open class OwnerInfo : AbstractObject() {
     var name: String? = null
     var accountOwner: String? = null
     var characterOwner: String? = null
-    override fun equals(o: Any?): Boolean {
-        if (this === o) {
+    override fun equals(other: Any?): Boolean {
+        if (this === other) {
             return true
         }
-        if (o !is OwnerInfo) {
+        if (other !is OwnerInfo) {
             return false
         }
         return EqualsBuilder()
-            .append(id, o.id)
-            .append(name, o.name)
-            .append(accountOwner, o.accountOwner)
-            .append(characterOwner, o.characterOwner)
+            .append(id, other.id)
+            .append(name, other.name)
+            .append(accountOwner, other.accountOwner)
+            .append(characterOwner, other.characterOwner)
             .isEquals
     }
 

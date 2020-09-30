@@ -7,7 +7,7 @@ open class AbstractObject {
     protected var unknownFields: MutableMap<String, Any> = HashMap()
 
     @JsonAnyGetter
-    fun getUnknownFieldsMap(): Map<String, Any> {
+    fun getUnknownFieldsMap(): MutableMap<String, Any> {
         return unknownFields
     }
 

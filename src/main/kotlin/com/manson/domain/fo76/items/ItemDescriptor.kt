@@ -12,10 +12,10 @@ import org.apache.commons.lang3.builder.ToStringStyle
 
 open class ItemDescriptor : AbstractObject() {
     var text: String? = null
-    var serverHandleId: Long? = null
-    var count: Int? = null
+    var serverHandleId: Long = -1
+    var count: Int = 0
     var itemValue: Int = 0
-    var filterFlag: Int? = null
+    var filterFlag: Int = -1
     var currentHealth: Int? = null
     var damage: Int? = null
     var durability: Int? = null
@@ -25,8 +25,8 @@ open class ItemDescriptor : AbstractObject() {
     var weaponDisplayRateOfFire: Double? = null
     var weaponDisplayRange: Double? = null
     var numLegendaryStars: Int = 0
-    var itemLevel: Int? = null
-    var rarity: Int? = null
+    var itemLevel: Int = -1
+    var rarity: Int = -1
 
     var isTradable: Boolean = false
     var isSpoiled: Boolean = false
@@ -91,10 +91,10 @@ open class ItemDescriptor : AbstractObject() {
 
     override fun hashCode(): Int {
         var result = text?.hashCode() ?: 0
-        result = 31 * result + (serverHandleId?.hashCode() ?: 0)
-        result = 31 * result + (count ?: 0)
+        result = 31 * result + (serverHandleId.hashCode())
+        result = 31 * result + count
         result = 31 * result + itemValue
-        result = 31 * result + (filterFlag ?: 0)
+        result = 31 * result + filterFlag
         result = 31 * result + (currentHealth ?: 0)
         result = 31 * result + (damage ?: 0)
         result = 31 * result + (durability ?: 0)
@@ -104,8 +104,8 @@ open class ItemDescriptor : AbstractObject() {
         result = 31 * result + (weaponDisplayRateOfFire?.hashCode() ?: 0)
         result = 31 * result + (weaponDisplayRange?.hashCode() ?: 0)
         result = 31 * result + numLegendaryStars
-        result = 31 * result + (itemLevel ?: 0)
-        result = 31 * result + (rarity ?: 0)
+        result = 31 * result + itemLevel
+        result = 31 * result + rarity
         result = 31 * result + isTradable.hashCode()
         result = 31 * result + isSpoiled.hashCode()
         result = 31 * result + isSetItem.hashCode()

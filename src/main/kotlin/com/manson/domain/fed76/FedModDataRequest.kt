@@ -4,5 +4,5 @@ import com.manson.domain.itemextractor.ItemDescriptor
 
 open class FedModDataRequest {
     var version: Double = 0.0
-    var characterInventories: Map<String, MutableList<ItemDescriptor>> = HashMap()
+    var characterInventories: MutableMap<String, MutableList<ItemDescriptor>> = HashMap()
 }

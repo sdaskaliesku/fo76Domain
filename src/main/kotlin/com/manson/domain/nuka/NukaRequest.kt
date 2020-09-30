@@ -8,7 +8,7 @@ open class NukaRequest {
     var prevNext = "start"
     private var map: MutableMap<String, String> = HashMap()
 
-    public fun toMultiPartMap(): Map<String, String> {
+    public fun toMultiPartMap(): MutableMap<String, String> {
         val map: MutableMap<String, String> = HashMap()
         map.putAll(this.map)
         map["searchtext"] = searchtext
