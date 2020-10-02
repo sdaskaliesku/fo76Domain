@@ -20,8 +20,11 @@
 
     <repositories>
         <repository>
-            <id>mavenCentral</id>
-            <url>https://repo1.maven.org/maven2/</url>
+            <id>github</id>
+            <name>GitHub sdaskaliesku Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/sdaskaliesku/fo76Domain</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>true</enabled></snapshots>
         </repository>
     </repositories>
 
