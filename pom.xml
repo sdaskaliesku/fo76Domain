@@ -4,7 +4,7 @@
 
     <groupId>com.manson.fo76</groupId>
     <artifactId>domain</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -97,6 +97,6 @@
         <connection>scm:git:ssh://git@github.com/sdaskaliesku/fo76Domain.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/sdaskaliesku/fo76Domain.git
         </developerConnection>
-        <tag>HEAD</tag>
+        <tag>domain-1.2</tag>
     </scm>
 </project>
