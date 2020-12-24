@@ -1,6 +1,7 @@
 package com.manson.domain
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+import com.manson.AbstractObject
 import org.apache.commons.lang3.builder.EqualsBuilder
 import org.apache.commons.lang3.builder.HashCodeBuilder
 
@@ -9,7 +10,7 @@ class LegendaryMod @JvmOverloads constructor(
     var value: String = "",
     var star: Int = 999,
     var abbreviation: String = ""
-) {
+) : AbstractObject() {
     var id: String = ""
     var gameId: String = ""
     var text: String = ""

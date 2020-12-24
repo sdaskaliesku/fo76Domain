@@ -1,8 +1,9 @@
 package com.manson.domain.config
 
+import com.manson.AbstractObject
 import com.manson.domain.fo76.items.enums.ArmorGrade
 
-open class ArmorConfig {
+open class ArmorConfig : AbstractObject() {
     var helper: String = ""
     var dr = 0
     var er = 0
