@@ -24,6 +24,8 @@ jobs:
           git config user.name "GitHub Actions"
       - name: Maven Release and Publish
         uses: qcastel/github-actions-maven-release@master
+        env:
+          JAVA_HOME: /usr/lib/jvm/java-1.8-openjdk/
         with:
           version-minor: true
           maven-repo-server-id: github
@@ -31,9 +33,5 @@ jobs:
           maven-repo-server-password: ${{ secrets.GH_TOKEN }}
           git-release-bot-name: ${{ secrets.GH_USERNAME }}
           git-release-bot-email: "actions@github.com"
-          # Github access token. https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
           access-token: ${{ secrets.GH_TOKEN }}
-          token: ${{ secrets.GH_TOKEN }}
-          maven-release-publish: true
           gpg-enabled: false
-          maven-snapshot-publish: "false"
