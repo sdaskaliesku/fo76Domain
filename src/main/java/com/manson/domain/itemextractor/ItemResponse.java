@@ -1,9 +1,7 @@
 package com.manson.domain.itemextractor;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.manson.domain.fed76.BasePriceCheckResponse;
+import com.manson.domain.fed76.PriceCheckResponse;
 import com.manson.domain.fo76.VendingData;
 import com.manson.domain.fo76.items.enums.FilterFlag;
 import lombok.*;
@@ -38,7 +36,6 @@ public class ItemResponse {
     private Boolean isAutoScrappable;
     private Boolean canGoIntoScrapStash;
     private Boolean isLearnedRecipe;
-    @JsonInclude(Include.ALWAYS)
-    private BasePriceCheckResponse priceCheckResponse;
+    private PriceCheckResponse priceCheckResponse;
 
 }
