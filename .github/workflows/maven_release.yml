@@ -33,5 +33,5 @@ jobs:
           maven-repo-server-password: ${{ secrets.GH_TOKEN }}
           git-release-bot-name: ${{ secrets.GH_USERNAME }}
           git-release-bot-email: "actions@github.com"
-          access-token: ${{ secrets.GH_TOKEN }}
           gpg-enabled: false
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
