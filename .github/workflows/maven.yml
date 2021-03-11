@@ -20,5 +20,9 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+    - name: Configure Git user
+      run: |
+            git config user.email "actions@github.com"
+            git config user.name "GitHub Actions"
     - name: Build with Maven
       run: mvn -B clean release:clean release:prepare release:perform --file pom.xml
