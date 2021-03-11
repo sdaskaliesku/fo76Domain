@@ -24,4 +24,5 @@ jobs:
         env:
           GITHUB_USERNAME: ${{ secrets.GH_USERNAME }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
         run: mvn -B --settings settings.xml --file pom.xml clean release:clean release:prepare release:perform --file pom.xml
