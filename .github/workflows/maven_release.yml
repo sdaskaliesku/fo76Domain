@@ -17,11 +17,11 @@ jobs:
         with:
           java-version: 1.8
       - name: Configure Git User
-      run: |
-        git config user.email "actions@github.com"
-        git config user.name "GitHub Actions"
-      - name: Deploy to Github Package Registry
+        run: |
+            git config user.email "actions@github.com"
+            git config user.name "GitHub Actions"
+      - name: Release
         env:
           GITHUB_USERNAME: ${{ secrets.GH_USERNAME }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: mvn --settings settings.xml --file pom.xml package deploy
+        run: mvn -B --settings settings.xml --file pom.xml clean release:clean release:prepare release:perform --file pom.xml
