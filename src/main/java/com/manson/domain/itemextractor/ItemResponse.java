@@ -1,10 +1,15 @@
 package com.manson.domain.itemextractor;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.manson.domain.fed76.PriceCheckResponse;
+import com.manson.domain.fed76.PriceEstimate;
 import com.manson.domain.fo76.VendingData;
 import com.manson.domain.fo76.items.enums.FilterFlag;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @NoArgsConstructor
@@ -36,6 +41,6 @@ public class ItemResponse {
     private Boolean isAutoScrappable;
     private Boolean canGoIntoScrapStash;
     private Boolean isLearnedRecipe;
-    private PriceCheckResponse priceCheckResponse;
+    private PriceEstimate priceCheckResponse;
 
 }

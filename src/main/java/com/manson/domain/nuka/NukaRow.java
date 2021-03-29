@@ -1,7 +1,12 @@
 package com.manson.domain.nuka;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @NoArgsConstructor
@@ -10,6 +15,7 @@ import lombok.*;
 @EqualsAndHashCode
 @ToString
 public class NukaRow {
+
     @JsonProperty("EDID")
     private String edid;
     @JsonProperty("Name")

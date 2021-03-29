@@ -3,11 +3,15 @@ package com.manson.domain.fed76;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.manson.domain.fo76.items.enums.ArmorGrade;
 import com.manson.domain.fo76.items.enums.FilterFlag;
-import lombok.*;
+import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
-
-import java.util.List;
 
 @Data
 @NoArgsConstructor

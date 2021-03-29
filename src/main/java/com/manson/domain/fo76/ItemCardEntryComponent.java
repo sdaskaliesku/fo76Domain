@@ -1,7 +1,11 @@
 package com.manson.domain.fo76;
 
 import com.manson.domain.AbstractObject;
-import lombok.*;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @NoArgsConstructor
@@ -9,4 +13,5 @@ import lombok.*;
 @EqualsAndHashCode(callSuper = false)
 @ToString(callSuper = true)
 public class ItemCardEntryComponent extends AbstractObject {
+
 }

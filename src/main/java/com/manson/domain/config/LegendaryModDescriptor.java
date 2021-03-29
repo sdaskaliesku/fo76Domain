@@ -3,11 +3,14 @@ package com.manson.domain.config;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.manson.domain.fo76.items.enums.FilterFlag;
-import lombok.*;
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.List;
 import java.util.Map;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import org.apache.commons.lang3.StringUtils;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
@@ -31,7 +34,7 @@ public class LegendaryModDescriptor extends XTranslatorConfig {
     public boolean isTheSameMod(String modName, FilterFlag filterFlag) {
         if (filterFlag != FilterFlag.UNKNOWN) {
             if (itemType != filterFlag && !filterFlag.getSubtypes().contains(itemType) && !itemType.getSubtypes()
-                    .contains(filterFlag)) {
+                .contains(filterFlag)) {
                 return false;
             }
         }

@@ -5,9 +5,13 @@ import com.manson.domain.AbstractObject;
 import com.manson.domain.fo76.AccountInfoData;
 import com.manson.domain.fo76.CharacterInfoData;
 import com.manson.domain.fo76.ItemDescriptor;
-import lombok.*;
-
 import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @NoArgsConstructor

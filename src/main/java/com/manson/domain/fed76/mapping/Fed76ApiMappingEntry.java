@@ -2,10 +2,14 @@ package com.manson.domain.fed76.mapping;
 
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import com.manson.domain.AbstractObject;
-import lombok.*;
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import org.apache.commons.lang3.StringUtils;
 
 @Data
 @NoArgsConstructor
@@ -14,6 +18,7 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = false)
 @ToString
 public class Fed76ApiMappingEntry extends AbstractObject {
+
     @JsonUnwrapped
     private String id;
     @JsonUnwrapped

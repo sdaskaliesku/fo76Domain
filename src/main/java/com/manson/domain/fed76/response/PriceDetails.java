@@ -1,4 +1,4 @@
-package com.manson.domain.fed76;
+package com.manson.domain.fed76.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.manson.domain.AbstractObject;
@@ -13,11 +13,13 @@ import lombok.ToString;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @ToString(callSuper = true)
-public class ReviewRatingResponse extends AbstractObject {
+public class PriceDetails extends AbstractObject {
 
-    @JsonProperty("@type")
-    private String type;
-    private String bestRating;
-    private String ratingValue;
-    private String worstRating;
+    private String vendor;
+    @JsonProperty("market-low")
+    private String marketLow;
+    @JsonProperty("market-high")
+    private String marketHigh;
+    private String niche;
+    private String original;
 }
