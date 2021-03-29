@@ -1,9 +1,13 @@
 package com.manson.domain.nuka;
 
-import lombok.*;
-
 import java.util.HashMap;
 import java.util.Map;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @NoArgsConstructor
@@ -12,6 +16,7 @@ import java.util.Map;
 @EqualsAndHashCode
 @ToString
 public class NukaRequest {
+
     private String searchtext;
     private Map<String, String> searchmatches;
     private Integer currentPage;

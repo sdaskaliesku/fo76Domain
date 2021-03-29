@@ -1,7 +1,12 @@
 package com.manson.domain.itemextractor;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @NoArgsConstructor
@@ -12,7 +17,7 @@ import lombok.*;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class OwnerInfo {
 
-  private String accountName;
-  private String characterName;
+    private String accountName;
+    private String characterName;
 
 }

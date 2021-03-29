@@ -1,7 +1,6 @@
-package com.manson.domain.fo76;
+package com.manson.domain.fed76.response;
 
-import com.manson.domain.AbstractObject;
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -9,9 +8,11 @@ import lombok.ToString;
 
 @Data
 @NoArgsConstructor
-@Builder
+@AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @ToString(callSuper = true)
-public class ModCardEntry extends AbstractObject {
+public class PlanReview extends BaseReview {
+
+    private PlanSubReview review;
 
 }

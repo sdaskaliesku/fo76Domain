@@ -1,7 +1,6 @@
 package com.manson.domain.fo76.items.enums;
 
 import com.fasterxml.jackson.annotation.JsonValue;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -47,12 +46,12 @@ public enum ItemCardText {
     AMMO("Ammo"),
     CARRY_WEIGHT("Carry Weight", "Carry Weight"),
     UNKNOWN("", "");
-    
+
     @JsonValue
     private final String value;
     private final List<String> values;
 
-    ItemCardText(String value, String ...values) {
+    ItemCardText(String value, String... values) {
         this.value = value;
         this.values = Arrays.asList(values);
     }

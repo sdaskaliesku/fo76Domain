@@ -27,9 +27,9 @@ public enum DamageType {
             return DamageType.UNKNOWN;
         }
         return Arrays.stream(DamageType.values())
-                .filter(x -> x.flag == dmgType)
-                .findFirst()
-                .orElse(UNKNOWN);
+            .filter(x -> x.flag == dmgType)
+            .findFirst()
+            .orElse(UNKNOWN);
     }
 
     public int getFlag() {

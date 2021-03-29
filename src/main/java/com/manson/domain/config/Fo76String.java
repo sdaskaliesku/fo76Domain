@@ -3,7 +3,12 @@ package com.manson.domain.config;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.manson.domain.AbstractObject;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
@@ -13,6 +18,7 @@ import lombok.*;
 @EqualsAndHashCode(callSuper = false)
 @ToString(callSuper = true)
 public class Fo76String extends AbstractObject {
+
     @JsonProperty("EDID")
     private String edid = "";
     @JsonProperty("REC")

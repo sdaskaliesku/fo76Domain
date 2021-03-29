@@ -2,12 +2,16 @@ package com.manson.domain.config;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.manson.domain.AbstractObject;
-import lombok.*;
-import org.apache.commons.collections4.MapUtils;
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.HashMap;
 import java.util.Map;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import org.apache.commons.collections4.MapUtils;
+import org.apache.commons.lang3.StringUtils;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
@@ -17,6 +21,7 @@ import java.util.Map;
 @EqualsAndHashCode(callSuper = false)
 @ToString(callSuper = true)
 public class XTranslatorConfig extends AbstractObject {
+
     private String id;
     private String gameId;
     private Map<String, String> texts;
