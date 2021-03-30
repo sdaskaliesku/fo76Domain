@@ -24,7 +24,9 @@ public class LegendaryModDescriptor extends XTranslatorConfig {
     private String abbreviation;
     private List<String> additionalAbbreviations;
     private Map<String, String> translations;
+    private String nameOverride;
     private FilterFlag itemType;
+    private boolean legacy;
 
     private static String prepareString(String input) {
         return input.trim().replace("'", "").replace("+", "").replace(".", "").replace("¢", "");
