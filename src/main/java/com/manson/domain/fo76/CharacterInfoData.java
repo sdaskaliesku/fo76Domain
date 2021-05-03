@@ -17,5 +17,4 @@ import lombok.ToString;
 public class CharacterInfoData extends AbstractObject {
 
     private String name;
-    private Integer level;
 }
